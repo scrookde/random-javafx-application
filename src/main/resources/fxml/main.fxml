@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #097bbd;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.scrook.sysinfo.controller.SysInfoController">
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="203.0" style="-fx-background-color: #0f6394;">
+         <children>
+            <Button contentDisplay="CENTER" layoutY="180.0" mnemonicParsing="false" onMouseClicked="#onMainClick" opacity="0.77" prefHeight="41.0" prefWidth="203.0" style="-fx-background-color: #ffffff;" text="Allgemein" textFill="#2d6097" />
+            <Button contentDisplay="CENTER" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#onHardwareClick" prefHeight="41.0" prefWidth="203.0" style="-fx-background-color: #ffffff;" text="Hardware" textFill="#2d6097" textOverrun="CLIP" />
+            <Button contentDisplay="CENTER" layoutY="262.0" mnemonicParsing="false" onMouseClicked="#onNetworkClick" prefHeight="41.0" prefWidth="203.0" style="-fx-background-color: #ffffff;" text="Netzwerk" textFill="#2d6097" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SYSTEMINFORMATION">
+               <font>
+                  <Font name="Bitstream Vera Sans Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="14.0" layoutY="483.0" onMouseClicked="#onQuitClick" strokeType="OUTSIDE" strokeWidth="0.0" text="QUIT" wrappingWidth="34.5224609375" />
+            <Hyperlink layoutX="132.0" layoutY="466.0" text="by ediz" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="freeMemory" layoutX="461.0" layoutY="372.0" prefHeight="16.0" prefWidth="108.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+      <Label fx:id="usedMemory" layoutX="461.0" layoutY="397.0" prefHeight="16.0" prefWidth="108.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+      <Label layoutX="281.0" layoutY="372.0" prefHeight="16.0" prefWidth="108.0" text="FREE MEMORY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="281.0" layoutY="397.0" text="USED MEMORY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label layoutX="283.0" layoutY="424.0" text="TOTAL MEMORY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalMemory" layoutX="461.0" layoutY="424.0" prefHeight="16.0" prefWidth="108.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+      <Button layoutX="714.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#onReloadClick" prefHeight="41.0" prefWidth="72.0" style="-fx-background-radius: 30px;" text="RELOAD" textAlignment="CENTER">
+         <effect>
+            <DropShadow height="11.89" radius="3.9275" width="5.82">
+               <color>
+                  <Color red="0.7368420958518982" green="0.23879142105579376" blue="0.23879142105579376" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Label layoutX="289.0" layoutY="55.0" text="SYSTEM NAME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="289.0" layoutY="82.0" text="OPERATING SYS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="sysName" layoutX="443.0" layoutY="55.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="operatingSys" layoutX="443.0" layoutY="82.0" prefHeight="16.0" prefWidth="72.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+      <Label layoutX="289.0" layoutY="108.0" text="KERNEL VERSION" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="kernelVersion" layoutX="443.0" layoutY="108.0" prefHeight="16.0" prefWidth="176.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="289.0" layoutY="133.0" prefHeight="16.0" prefWidth="127.0" text="JAVA VERSION" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="javaVersion" layoutX="443.0" layoutY="133.0" prefHeight="16.0" prefWidth="108.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="211.0" prefHeight="16.0" prefWidth="98.0" text="SCREEN SIZE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="screenSize" layoutX="443.0" layoutY="211.0" prefHeight="16.0" prefWidth="183.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

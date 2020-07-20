@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: #097bbd;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.scrook.sysinfo.controller.SysInfoController">
+  <children>
+    <AnchorPane prefHeight="500.0" prefWidth="203.0" style="-fx-background-color: #0f6394;">
+      <children>
+        <Button contentDisplay="CENTER" layoutY="180.0" mnemonicParsing="false" onMouseClicked="#onMainClick" prefHeight="41.0" prefWidth="203.0" style="-fx-background-color: #ffffff;" text="Allgemein" textFill="#2d6097" />
+        <Button contentDisplay="CENTER" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#onHardwareClick" opacity="0.77" prefHeight="41.0" prefWidth="203.0" style="-fx-background-color: #ffffff;" text="Hardware" textFill="#2d6097" textOverrun="CLIP" />
+        <Button contentDisplay="CENTER" layoutY="262.0" mnemonicParsing="false" onMouseClicked="#onNetworkClick" prefHeight="41.0" prefWidth="203.0" style="-fx-background-color: #ffffff;" text="Netzwerk" textFill="#2d6097" />
+        <Text fill="WHITE" layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SYSTEMINFORMATION">
+          <font>
+            <Font name="Bitstream Vera Sans Bold" size="14.0" />
+          </font>
+        </Text>
+        <Text fill="WHITE" layoutX="14.0" layoutY="483.0" onMouseClicked="#onQuitClick" strokeType="OUTSIDE" strokeWidth="0.0" text="QUIT" wrappingWidth="34.5224609375" />
+        <Hyperlink layoutX="132.0" layoutY="466.0" text="by ediz" textFill="WHITE" />
+      </children>
+    </AnchorPane>
+  </children>
+</Pane>
